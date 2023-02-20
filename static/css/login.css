@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Abyssinica+SIL&family=Alumni+Sans+Collegiate+One:ital@1&family=Dancing+Script:wght@400;500;700&family=Libre+Baskerville:ital@0;1&family=Merriweather:ital,wght@1,300&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,700&family=Poppins:wght@300;400&family=Roboto+Condensed:ital@1&display=swap');
+/* font-family: 'Abel', sans-serif;
+font-family: 'Abyssinica SIL', serif;
+font-family: 'Alumni Sans Collegiate One', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Merriweather', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+*{
+    padding:0;
+    margin:0;
+}
+
+.containers{
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(145deg, rgb(135,129,255), rgb(255 110 110), rgb(243, 243, 65)); */
+    background-image: url("https://media.istockphoto.com/id/855113808/photo/abstract-black-modern-background-design.jpg?s=612x612&w=0&k=20&c=aQ9UJ2JQBPzvVOxfU2Zl2Z0rcNwK7IB3nrowW6j4yW8=");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.containers .login-box{
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255 255 255);
+    padding: 25px 25px 45px 25px;
+    border-radius:15px;
+}
+h2{
+    font: 36px 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::before{
+    position: absolute;
+    content: '';
+    width: 225px;
+    height: 5px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, rgb(33, 236, 213), rgb(243, 131, 33));
+    bottom: -8px;
+}
+
+.login::before{
+    width: 80px;
+}
+
+.login-box .input-box{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    position: relative;
+}
+.login-box .input-box input[type='text']{
+    width: 100%;
+    font-size: 16px;
+    margin: 16px 0px;
+    outline: none;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: black;
+}
+.login-box .input-box label{
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font: 16px 'Playfair Display', serif;
+    color: #0000009e;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.login-box .input-box input:focus + label,
+.login-box .input-box input:valid + label{
+    top: -7px;
+    font-size: 14px;
+}
+
+.login-box .input-box .password-checkbox{
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-box .input-box .password-checkbox p{
+    margin-left: 5px;
+}
+
+.login-box .submit-button{
+    width: 100%;
+    background: linear-gradient(313deg, rgb(135,129,255), rgb(255 110 110), rgb(243, 243, 65));
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-box .submit-button:active{
+    transform: scale3d(0.9,0.9,0.9);
+}
+
+.login-box .login-link{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-box .login-link a{
+    color: black;
+    text-decoration: none;
+}
+
+.login-box .login-link a:hover{
+    color: rgba(0, 0, 0, 0.432);
+    text-decoration: underline;
+}

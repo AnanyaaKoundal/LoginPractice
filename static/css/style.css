@@ -1,0 +1,20 @@
+    
+.head{
+    display: flexbox;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(248, 10, 10);
+}
+
+.input{
+    width: 550px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin: 20px;
+}
+
+.sign{
+    text-decoration: none;
+    color: black;
+}

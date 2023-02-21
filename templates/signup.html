@@ -12,9 +12,14 @@
     <div class="containers">
         <div class="login-box">
             <h2>Create an account</h2>
-            <form action="/" method="POST" >
+            {% if err==True %} 
+            <div class="err">
+                User already exist!!
+            </div>
+            {% endif %}
+            <form action="/signup.html" method="POST" >
                 <div class="input-box">
-                    <input type="text" class="email" name="email" required>
+                    <input type="email" class="email" name="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
@@ -22,7 +27,7 @@
                     <label>Username</label>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="password" name="password" required>
+                    <input type="password" class="password" name="password" required>
                     <label>Password</label>
                     <!-- <div class="password-checkbox"><input type="checkbox"><p>Show password</p></div> -->
                 </div>

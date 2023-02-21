@@ -17,22 +17,27 @@ font-family: 'Roboto Condensed', sans-serif; */
     width: 100vw;
     height: 100vh;
     /* background: linear-gradient(145deg, rgb(135,129,255), rgb(255 110 110), rgb(243, 243, 65)); */
-    background-image: url("https://media.istockphoto.com/id/855113808/photo/abstract-black-modern-background-design.jpg?s=612x612&w=0&k=20&c=aQ9UJ2JQBPzvVOxfU2Zl2Z0rcNwK7IB3nrowW6j4yW8=");
+    background-image: url("https://wallpaper.dog/large/10720468.jpg");
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .containers .login-box{
     position: absolute;
-    width: 350px;
+    width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(255 255 255);
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
     padding: 25px 25px 45px 25px;
     border-radius:15px;
 }
 h2{
+    color: white;
     font: 36px 'Dancing Script', cursive;
     text-align: center;
     margin-bottom: 30px;
@@ -55,7 +60,6 @@ h2::before{
 
 .login-box .input-box{
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -64,18 +68,20 @@ h2::before{
 .login-box .input-box input[type='text']{
     width: 100%;
     font-size: 16px;
+    color: #ffffff;
+    background: transparent;
     margin: 16px 0px;
     outline: none;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
-    border-color: black;
+    border-color: #ffffff;
 }
 .login-box .input-box label{
     position: absolute;
     left: 0;
     top: 12px;
     font: 16px 'Playfair Display', serif;
-    color: #0000009e;
+    color: white;
     pointer-events: none;
     transition: 0.2s;
 }
@@ -101,8 +107,10 @@ h2::before{
     width: 100%;
     background: linear-gradient(313deg, rgb(135,129,255), rgb(255 110 110), rgb(243, 243, 65));
     border:none;
-    border-radius: 3px;
     cursor: pointer;
+    height: 30px;
+    border-radius: 7px;
+    margin-top: 10px;
 }
 
 .login-box .submit-button:active{
@@ -116,11 +124,11 @@ h2::before{
 }
 
 .login-box .login-link a{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 .login-box .login-link a:hover{
-    color: rgba(0, 0, 0, 0.432);
+    color: rgba(255, 255, 255, 0.432);
     text-decoration: underline;
 }

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
+import jyserver as jsf
 app=Flask(__name__)
 # app.app_context().push()
 app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///Users.db"
@@ -15,16 +16,8 @@ class Members(db.Model):
     def __repr__(self) ->str:
         return f"{self.email}"
 
-
 @app.route('/', methods=['GET', 'POST'])
 def helloworld():
-    if request.method == 'POST':
-        email=request.form['email']
-        user=request.form['username']
-        pas=request.form['password']
-        e=Members(email=email, username=user, password=pas)
-        db.session.add(e)
-        db.session.commit()
     entry=Members.query.all()
     return render_template('index.html', entry=entry)
     
@@ -39,13 +32,28 @@ def signup():
         db.session.commit()
         entry=Members.query.all()
         print('Abc')
-        return render_template('index.html', entry=entry)
+        return render_template('home.html', entry=entry)
     return render_template('signup.html')
 
-@app.route('/login.html')
+
+
+@app.route('/login.html', methods=['GET', 'POST'])
 def login():
     return render_template('login.html')
 
+
+@app.route('/loginval', methods=['GET', 'POST'])
+def logcheck():
+    ac=request.form['ans']
+    pas=request.form['password']
+    chk=Members.query.filter(Members.username==ac and Members.password==pas)
+    if(chk):
+        return render_template('home.html')
+    return render_template('index.html')
+
+# @app.route('/home.html')
+# def home():
+#     return render_template('home.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
